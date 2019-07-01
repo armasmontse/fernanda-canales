@@ -1,0 +1,103 @@
+/* P r o y e c t o s */
+.proyectos {
+
+}
+
+.archive {
+
+	&__box {
+		/*background: c(white);*/
+
+		&-cuadricula {
+			min-height: 210px;
+			background: c(white);
+
+			.post {
+				height: auto;
+
+				&__aspect {
+					@extend %box-aspect-ratio;
+					padding-bottom: 100%;
+
+					&--imagen {
+						@extend %imagen-aspect-ratio;
+
+					}
+				}
+
+				&.obra-construida {
+					.post__aspect--imagen {
+						filter: grayscale(0%);
+						&:hover {
+							filter: grayscale(100%);
+
+							cursor: pointer;
+						}
+						&:active {
+							filter: grayscale(100%);
+						}
+					}
+				}
+
+				&.built-work {
+					.post__aspect--imagen {
+						filter: grayscale(0%);
+						&:hover {
+							filter: grayscale(100%);
+
+							cursor: pointer;
+						}
+						&:active {
+							filter: grayscale(100%);
+						}
+					}
+				}
+
+				&.proyectos {
+					.post__aspect--imagen {
+						filter: grayscale(100%);
+						&:hover {
+							filter: grayscale(0%);
+							cursor: pointer;
+						}
+						&:active {
+							filter: grayscale(0%);
+						}
+					}
+				}
+				&.projects {
+					.post__aspect--imagen {
+						filter: grayscale(100%);
+						&:hover {
+							filter: grayscale(0%);
+							cursor: pointer;
+						}
+						&:active {
+							filter: grayscale(0%);
+						}
+					}
+				}
+
+				&__titulo {
+					@extend %titulo-archive-proyectos;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	&__wrapper {
+
+		&-cuadricula {
+			@include under(medium) {
+		        grid-template-columns: 31% 31% 31% !important;
+		  	}
+		  	@include under(sm) {
+		        grid-template-columns: 48% 48% !important;
+		  	}
+		  	@include under(mobile) {
+		        grid-template-columns: auto !important;
+		  	}
+		}
+	}
+}

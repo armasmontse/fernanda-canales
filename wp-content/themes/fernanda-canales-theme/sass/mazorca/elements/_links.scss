@@ -1,0 +1,20 @@
+%link {
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover,
+	&:active,
+	.selected {
+	}
+}
+
+
+%links-menu, .links-menu {
+	@extend %HelveticaNeueLTStdRoman;
+	color: c(grey);
+	font-size: 12px;
+	line-height: 29px;
+	// @include under(mobile) {
+	// 	font-size: 10px;
+	// }
+}

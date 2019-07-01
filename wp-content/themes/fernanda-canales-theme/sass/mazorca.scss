@@ -1,0 +1,43 @@
+@charset "UTF-8";
+//===Mazorca Core===//
+@import "node_modules/mazorca-core/_mazorca-core.scss";
+
+//===Configs===//
+@import "mazorca/config/_config";
+
+//===Vendor===//Css begins compling here
+	// @import "vendor/bootstrap/_bootstrap.scss";
+
+//===Mazorca===//
+@import "mazorca/_elements";
+@import "mazorca/_grid";//
+@import "mazorca/_components";
+@import "mazorca/_theme-helpers";
+@import "mazorca/_modules";
+
+.layout {
+
+	&__ttl {
+		font-weight: bold;
+		font-family: f(sans);
+		font-size: 128px;
+		margin: 54px 0;
+		line-height: 54px;
+		color: #7A7D7E;
+		text-align: center;
+		small {
+			font-size: 28px;
+		}
+	}
+
+	&__content {
+		font-size: 14px;
+		text-align: center;
+
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

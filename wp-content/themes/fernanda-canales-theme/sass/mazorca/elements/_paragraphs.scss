@@ -1,0 +1,38 @@
+%paragraph {
+
+}
+
+%titulo-archive-proyectos {
+	@extend %HelveticaNeueLTStdRoman;
+	color: c(grey);
+	font-size: 12px;
+	line-height: 18px;
+}
+
+%paragraph-archive-publicaciones {
+	@extend %HelveticaNeueLTStdRoman;
+	color: c(grey);
+	font-size: 12px;
+	line-height: 18px;
+}
+
+%detalles-single-proyecto {
+	@extend %HelveticaNeueLTStdRoman;
+	font-size: 12px;
+	line-height: 26px;
+	color: c(grey);
+}
+
+%contenido-contacto {
+	@extend %HelveticaNeueLTStdRoman;
+	font-size: 12px;
+	line-height: 22px;
+	color: c(grey);
+}
+
+%redes-twitter {
+	@extend %CourierNew;
+	font-size: 12px;
+	line-height: 26px;
+	color: c(grey);
+}

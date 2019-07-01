@@ -1,0 +1,22 @@
+%title {
+}
+
+%title-logo-name, .title-logo-name {
+	@extend %HelveticaNeueLTStdBd;
+	color: c(grey);
+	font-size: 16.5px;
+	line-height: 15px;
+	@include under(mobile) {
+		font-size: 13px;
+	}
+}
+
+%title-CourierNew, .title-CourierNew {
+	@extend %CourierNew;
+	color: c(grey);
+	font-size: 14px;
+	line-height: 12px;
+	@include under(mobile) {
+		font-size: 11px;
+	}
+}

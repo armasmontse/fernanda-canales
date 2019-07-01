@@ -1,0 +1,138 @@
+.splash {
+
+	&__col {
+		width: 100%;
+		max-width: 650px;
+		margin: 0 auto;
+		height: 100vh;
+		min-height: 650px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		@include under(mobile) {
+			min-height: 100vh;
+		}
+	}
+
+	&__logo {
+		height: 45px;
+		font-family: f(sans);
+		margin: 16px 0 15px 0;
+		// margin-bottom: 13.5vh;
+    		// margin-top: -9.5vh;
+		// @include under(mobile) {
+		// 	margin-bottom: 9.5vh;
+	    	// 	margin-top: -9.5vh;
+		// }
+		// @include under(400px) {
+		// 	// margin-bottom:0;
+	    	// 	// margin-top: 0;
+		// 	margin-bottom: 4vh;
+		// 	margin-top: -9.5vh;
+		// }
+		// @include under(330px) {
+		// 	margin-bottom:0;
+	    	// 	margin-top: 0;
+		//
+		// }
+		svg {
+			height: 100%;
+			width: auto;
+			fill: #666666;
+		}
+	}
+
+	&__contact {
+		margin: 15px 0;
+		font-family: f(sans);
+		text-align: center;
+		max-width: 350px;
+		color: #7A7D7E;
+		font-size: 12px;
+
+		&-ttl {
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-bottom: 1em;
+		}
+
+		&-content {
+			line-height: 1.5em;
+
+			a {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	&__lenguaje {
+		display: flex ;
+		flex-direction: row ;
+		@extend %HelveticaNeueLTStdBd ;
+		font-size: 13px ;
+		line-height: 15px ;
+		color: c(grey) ;
+		margin-top: 12px ;
+		li {
+			padding: 0 5px ;
+			cursor: pointer ;
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: underline ;
+			}
+		}
+		li:last-child {
+			position: relative ;
+			padding: 0 9px;
+			&:after {
+				content: '|' ;
+				position: absolute ;
+				left: 0 ;
+				top: 0 ;
+			}
+		}
+	}
+
+	.swiper-container {
+		width: 100%;
+		height: 350px;
+		margin: 0;
+		@include under(mobile) {
+			height: 350px;
+		}
+	}
+
+	.swiper-slide {
+		display: flex;
+		justify-content: center;
+		background-color: white;
+
+		img {
+			height: 100%;
+			width: auto;
+			object-fit: contain;
+		}
+	}
+
+	&__content50 {
+		height: calc(50vh - 175px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__content {
+		height: calc(50vh - 175px);
+	}
+
+	&__page-link {
+		width: 100%;
+	     height: 100%;
+	     display: flex;
+	}
+
+}

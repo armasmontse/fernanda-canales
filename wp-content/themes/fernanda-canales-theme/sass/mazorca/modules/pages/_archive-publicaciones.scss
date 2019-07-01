@@ -1,0 +1,94 @@
+/* P r o y e c t o s */
+.publicaciones {
+	//  B O R R A R   A L    T E R M I N A R
+
+}
+
+.archive {
+
+	&__box {
+		/*background: c(white) ;*/
+
+		&-cuadricula {
+			min-height: 210px ;
+			background: c(white) ;
+
+
+			.publicaciones-post {
+				width: 100% ;
+				height: auto ;
+				cursor: pointer ;
+
+				&__aspect {
+					@extend %box-aspect-ratio ;
+					padding-bottom: 135% ;
+
+					&--imagen {
+						@extend %imagen-aspect-ratio ;
+					}
+				}
+
+				&__titulo {
+					@extend %paragraph-archive-publicaciones ;
+					padding-top: 10px ;
+					padding-bottom: 13px ;
+					@include under(mobile) {
+						padding-bottom: 0px;
+					}
+					strong {
+						@extend %HelveticaNeueLTStdBd;
+					}
+				}
+			}
+		}
+	}
+
+	&__wrapper {
+
+		&-cuadricula {
+			@include under(medium) {
+		        grid-template-columns: auto auto auto ;
+		  	}
+		  	@include under(sm) {
+		        grid-template-columns: auto auto ;
+		  	}
+		  	@include under(mobile) {
+		        grid-template-columns: auto ;
+		  	}
+		}
+	}
+}
+
+
+body.post-type-archive-book {
+	.archive__box-cuadricula.featured {
+		grid-column-start: 1;
+		grid-column-end: span 2;
+		grid-row-start: 1;
+		grid-row-end: 3;
+		@include under(mobile) {
+			grid-column-start: 1;
+			grid-column-end: span 1;
+			grid-row-start: 1;
+			grid-row-end: 1;
+		}
+		.publicaciones-post {
+
+			&__aspect {
+				padding-bottom: 155.5% ;
+				@include under(lg) {
+					padding-bottom: 159.5% ;
+				}
+
+				@include under(md) {
+					padding-bottom: 156.5% ;
+				}
+
+				@include under(mobile) {
+					padding-bottom: 145.5% ;
+				}
+			}
+		}
+
+	}
+}

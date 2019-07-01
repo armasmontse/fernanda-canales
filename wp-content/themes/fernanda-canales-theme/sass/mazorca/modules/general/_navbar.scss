@@ -1,0 +1,172 @@
+.navbar {
+
+     &__fixed {
+          position: fixed;
+          left: auto;
+          top: 0px;
+          top: 42px;
+          @include under(mobile) {
+               top: 15px;
+               z-index: 2;
+               width: 100%;
+               left: 0;
+               background: white;
+               padding: 5px 20px;
+
+          }
+     }
+
+     &__dropdown {
+          padding: 6px 0 1px 12px ;
+          display: none ;
+          @include under(mobile) {
+               padding: 0 ;
+
+          }
+
+          &-item {
+                line-height: 15px ;
+                padding-bottom: 6px ;
+                text-decoration: none ;
+                @include under(mobile) {
+                    padding: 0 10px;
+                }
+
+                &:active {
+                    & > a {
+                        font-family: "HelveticaNeueLTStdBd";
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+                }
+
+                &.select {
+
+                    & > a {
+                        font-family: "HelveticaNeueLTStdBd";
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+                }
+
+          }
+
+          &-mobile {
+               display: none ;
+               @include under(mobile) {
+                    display: block ;
+               }
+          }
+
+          &.proyectos {
+               list-style: square;
+               @include under(mobile) {
+                    display: none !important;
+               }
+          }
+     }
+
+     &__sidebar {
+
+          @include under(mobile) {
+               margin-bottom: 10px ;
+               margin-top: 55px;
+          }
+          .header__item {
+               @include under(mobile) {
+                    display: none ;
+               }
+               &.active {
+                    @include under(mobile) {
+                         display: flex ;
+                         padding: 0px ;
+                    }
+
+                    & > a {
+                        @extend %HelveticaNeueLTStdRoman;
+                        font-family: "HelveticaNeueLTStdBd";
+                        font-weight: bold;
+                        font-style: normal;
+
+                        @include under(mobile) {
+                            position: relative ;
+                            padding-right: 5px ;
+                            margin: 0 5px 0px 0px ;
+                            &:before {
+                                content: ':' ;
+                                position: absolute ;
+                                top: 0 ;
+                                right: 0 ;
+                            }
+                        }
+                    }
+
+
+                    .navbar__dropdown {
+                        display: block ;
+                        text-decoration: none ;
+                        
+                        @include under(mobile) {
+                            display: flex;
+                            flex-direction: row;
+                            padding: 0px ;
+                        }
+                    }
+
+                    .navbar__dropdown-item {
+                        @extend %HelveticaNeueLTStdRoman;
+                        
+                        @include under(mobile) {
+                            position: relative;
+                            
+                            &:before {
+                                content: '|' ;
+                                position: absolute;
+                                top: 7px  ;
+                                right: -2px ;
+                            }
+                            
+                            &:last-child {
+                                &:before {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+               }
+
+               a {
+                    width: 100% ;
+                    height: 100% ;
+                    display: flex ;
+                    @include under(mobile) {
+                         width: auto ;
+                         display: flex ;
+                         align-items: center ;
+                         // justify-content: center;
+                         justify-content: flex-start ;
+                         padding: 0px ;
+                    }
+               }
+          }
+
+          .header__navbar--list {
+               @include under(mobile) {
+                    display: flex;
+                    flex-direction: row;
+               }
+          }
+     }
+}
+
+.wrapper-min {
+     @include under(mobile) {
+          grid-template-rows: 50px auto;
+
+          .archive__box.sidebar .navbar__sidebar {
+               margin-top: -15px ;
+
+          }
+     }
+
+}

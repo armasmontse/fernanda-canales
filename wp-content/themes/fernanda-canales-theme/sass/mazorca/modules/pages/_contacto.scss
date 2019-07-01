@@ -1,0 +1,105 @@
+/* C o n t a c t o */
+.contacto {
+
+	/* F o t o */
+	.foto {
+		@include under(sm) {
+			margin: 70px 0 30px;
+		}
+
+		&__box {
+
+			&--aspect {
+				@extend %box-aspect-ratio;
+				padding-bottom: 151%;
+			}
+
+			&--imagen {
+				@extend %imagen-aspect-ratio;
+			}
+		}
+	}
+
+	/* R e d e s */
+	.redes {
+		display: flex;
+		flex-direction: column;
+		// margin-top: 35px;
+		margin-top: 9px;
+
+
+		@include under(sm) {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&__mail {
+			@extend %contenido-contacto;
+		}
+
+		&__twitter {
+			// @extend %redes-twitter;
+			@extend %contenido-contacto;
+			color: #969393;
+		}
+	}
+
+	/* D e s c r i p c i ó n */
+	.descripcion {
+
+		&__lugar {
+			@extend %contenido-contacto;
+			margin-bottom: 20px;
+		}
+
+		&__contenido {
+			@extend %contenido-contacto;
+			@extend %content;
+			display: flex;
+			@include under(md) {
+				flex-direction: column;
+			}
+			&--col {
+				width: 50%;
+    			margin-right: 20px;
+    			@include under (md) {
+    				width: 90%;
+    				margin: 0;
+    			}
+    			@include under (sm) {
+    				width: 97%;
+    			}
+			}
+		}
+	}
+
+	/* G r i d */
+	.archive__col-1-3 {
+		@include under(md) {
+			width: 50%;
+			max-width: none;
+		}
+		@include under(sm) {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+	.archive__col70 {
+	    width: 68%;
+	    margin-left: 20px;
+	    @include under(md){
+			width: 50%;
+	    }
+	    @include under(sm) {
+			width: 95%;
+			margin: 0 auto;
+		}
+	}
+
+	.archive__columns {
+		@include under(sm) {
+			flex-direction: column;
+		}
+	}
+}

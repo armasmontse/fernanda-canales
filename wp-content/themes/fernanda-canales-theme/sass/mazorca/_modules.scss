@@ -1,0 +1,12 @@
+//_________________________ Modules _________________________ \\
+@import "modules/_splash";
+
+@import "modules/general/_header";
+@import "modules/general/_navbar";
+
+//_________________________ Pages _________________________ \\
+@import "modules/pages/_archive-proyectos";
+@import "modules/pages/_single-proyectos";
+@import "modules/pages/_archive-publicaciones";
+@import "modules/pages/_contacto";
+@import "modules/pages/_single-publicaciones";
